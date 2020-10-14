@@ -1,43 +1,48 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<CodeBlocks_project_file>
-	<FileVersion major="1" minor="6" />
-	<Project>
-		<Option title="string reverse using stack" />
-		<Option pch_mode="2" />
-		<Option compiler="gcc" />
-		<Build>
-			<Target title="Debug">
-				<Option output="bin/Debug/string reverse using stack" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-g" />
-				</Compiler>
-			</Target>
-			<Target title="Release">
-				<Option output="bin/Release/string reverse using stack" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Release/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-O2" />
-				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
-			</Target>
-		</Build>
-		<Compiler>
-			<Add option="-Wall" />
-		</Compiler>
-		<Unit filename="main.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-		</Extensions>
-	</Project>
-</CodeBlocks_project_file>
+#include<stdio.h>
+int a[100],choice,n,t,x,i,pu,pp;
+void push();
+void pop();
+int main()
+{
+    t=-1;
+    printf("Enter size:\n");
+    scanf("%d",&n);
+    push();
+    pop();
+}
+void push()
+{
+    if(t>=n-1)
+    {
+        printf("stack is full\n");
+    }
+    else
+    {
+        printf("size to push\n");
+        scanf("%d",&pu);
+        for(i=0;i<pu;i++)
+        {
+             printf(" Enter value to pushed:");
+        scanf("%d",&x);
+        t++;
+        a[t]=x;
+        }
+    }
+}
+void pop()
+{
+    if(t<=-1)
+    {
+        printf("Stack is empty\n");
+    }
+    else
+    {
+         printf("size to pop\n");
+        scanf("%d",&pp);
+        for(i=0;i<pp;i++)
+        {
+           printf("The popped elements= %d\n",a[t]);
+        t--;
+        }
+    }
+}
